@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>For You 🤍</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f8f5f2;
+            color: #4e4036;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 720px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.7;
+            white-space: pre-line;
+        }
+
+        img {
+            width: 90%;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+        }
+
+        .button {
+            background: #7b6f63;
+            color: white;
+            padding: 14px 22px;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background: #5e5147;
+        }
+
+        #prankSection {
+            margin-top: 30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Musik ulang tahun (langsung main) -->
+    <audio id="bdayMusic" src="MUSIK_ULANGTAHUN.mp3" autoplay loop></audio>
+
+    <!-- Musik prank (diputar paling akhir) -->
+    <audio id="prankMusic" src="MUSIK_GALAU.mp3"></audio>
+
+    <div class="container">
+
+        <h1>Happy 21 🤍</h1>
+
+        <p>
+Happy 21, bestie! ✨
+Nggak kerasa kita kenal sejak SMP,
+dari yang awalnya cuma tukeran cerita receh
+sampai akhirnya jadi orang yang aku percaya buat banyak hal.
+
+Di usia ini, semoga hidupmu makin lega,
+mimpi-mimpi kamu makin dekat,
+dan hari-hari kamu penuh hal baik yang datang tanpa perlu dipaksa.
+
+Kamu tuh orang baik, meskipun kamu nggak selalu lihat itu di diri kamu.
+Tapi aku lihat. Sejak dulu.
+
+Dan… yes, akhirnya kamu legal.
+Sekarang kamu bisa baca cerita-cerita aku
+tanpa bikin aku merasa jadi kriminal 😭✨
+
+Selamat ulang tahun.
+Semoga kamu selalu menemukan alasan untuk tersenyum
+—bahkan di hari yang paling berat sekalipun.
+        </p>
+
+        <!-- FOTO-FOTO AKTOR BL -->
+        <img src="FOTO1.jpg" alt="">
+        <img src="FOTO2.jpg" alt="">
+        <img src="FOTO3.jpg" alt="">
+
+        <div id="prankSection">
+            <h3>Last surprise for you 👀✨</h3>
+            <div class="button" onclick="playPrank()">Open</div>
+        </div>
+
+        <script>
+            // Tampilkan tombol prank setelah 2 detik
+            setTimeout(() => {
+                document.getElementById("prankSection").style.display = "block";
+            }, 2000);
+
+            function playPrank() {
+                document.getElementById("bdayMusic").pause();
+                document.getElementById("prankMusic").play();
+            }
+        </script>
+
+    </div>
+</body>
+</html>
